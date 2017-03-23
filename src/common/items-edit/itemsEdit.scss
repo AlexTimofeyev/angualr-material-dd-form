@@ -1,0 +1,32 @@
+@import "./../../style/angular-material.min.scss"; 
+//@import "./test.css"; 
+
+
+
+$primary-color: #333;
+
+ 
+ .angular-ui-tree-drag {
+     opacity: 1;
+ }
+
+.ddf-element-container {
+     background-color: $primary-color;
+ }
+ 
+.ddf-element-container-dragg .angular-ui-tree-node  {
+    @extend .md-whiteframe-8dp;    
+    background-color: white;
+}
+
+.ddf-element-container-placeholder {
+    background-color: burlywood;
+     
+ }
+
+md-input-container {
+    margin-bottom: 0px;
+}
+.md-errors-spacer {
+   min-height: 14px;
+}

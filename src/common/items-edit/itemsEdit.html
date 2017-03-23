@@ -1,0 +1,18 @@
+<div ui-tree style="padding: 0 5px">
+  <div ui-tree-nodes ng-model="items">
+    <div ng-repeat="item in items" ui-tree-node layout="row" class="md-whiteframe-2dp" style="margin-bottom: 8px ">
+
+      <div ddf-element-loader=item flex class="elementContainer"> </div>
+
+      <div style="width: 30px; background-color: darkgrey">
+        <span   style="cursor: pointer"> ^ </span>
+      </div>
+      <div style="width: 40px; background-color: gainsboro; cursor: pointer" ui-tree-handle>
+        <span> :: </span>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</div>

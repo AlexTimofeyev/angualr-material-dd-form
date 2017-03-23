@@ -1,0 +1,22 @@
+<div layout="column" style="height:100%;" flex>
+
+    <div flex=50 class="md-whiteframe-2dp">
+        <div layout="row" layout-align="center center">
+            <div layout="row" style="width: 400px"> 
+                <div ddf-items-edit="$ctrl.items" flex> </div>  
+            </div>
+        </div>
+    </div>
+
+    <div flex=50>
+        <div layout="row" layout-align="center center">
+            <div layout="row" style="width: 600px"> 
+                
+                <div ddf-items-view="$ctrl.items"> </div>  
+
+                {{$ctrl.items}}
+            </div>
+        </div>
+    </div>
+
+</div>
