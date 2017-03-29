@@ -16,6 +16,11 @@ angular.module('exampleapp', [ ddf ])
                 name   : 'Фамилия',
                 config : {},
                 subitems: []
+            },{
+                type   : "input-text",
+                name   : 'отечство',
+                config : {},
+                subitems: []
             }];
 
         }
