@@ -1,7 +1,8 @@
 /* @ngInject */
 export default class ItemsController {
     constructor($scope) {
-        console.log($scope, this);
+        this.isShowConfig = false;
+        this.$scope = $scope;
     }
 
     onSelected(item) {
@@ -17,5 +18,10 @@ export default class ItemsController {
     onEdit(item, $event) {
         console.log('onEdit', item.$id);
         $event.stopPropagation();
+    }
+
+    showConfig() {
+        this.isShowConfig = !this.isShowConfig;
+        console.log( 'showParams' );
     }
 }
