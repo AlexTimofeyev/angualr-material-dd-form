@@ -3,7 +3,7 @@
     <div flex=50 class="md-whiteframe-2dp">
         <div layout="row" layout-align="center center">
             <div layout="row" style="width: 400px; padding-top: 8px;"> 
-                <div ddf-items-edit="$ctrl.items" flex> </div>  
+                <ddf-items-edit ddf-items="$ctrl.items" flex> </ddf-items-edit>  
             </div>
         </div>
     </div>
@@ -12,9 +12,9 @@
         <div layout="row" layout-align="center center">
             <div layout="row" style="width: 600px"> 
                 
-                <div ddf-items-view="$ctrl.items"> </div>  
+               <ddf-items-view ddf-items="$ctrl.items" flex> </ddf-items-view>  
 
-                {{$ctrl.items}}
+                
             </div>
         </div>
     </div>

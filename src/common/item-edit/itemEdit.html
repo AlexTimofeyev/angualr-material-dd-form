@@ -1,24 +1,19 @@
 <div flex layout="row">
 
-  <div ddf-element-loader=item flex class=""> </div>
+  <ddf-item-loader ddf-item=item ddf-editable=true flex class=""> </ddf-item-loader>
 
-  <div style="width: 30px; background-color: darkgrey">
-    <span style="cursor: pointer" ng-click="ctrl.showConfig()"> ^ </span>
+  <div layout="column" layout-align="center center" >
+    <a href="javascript:void(0)" ng-click="ctrl.showConfig()" 
+      class="ddf_item_settings_btn material-icons">settings</a>    
   </div>
 
-  <div style="width: 40px; background-color: gainsboro; cursor: pointer" ui-tree-handle>
-    <span> :: </span>
-  </div>
-
+  <div layout="column" layout-align="center center"  >
+   <a href="javascript:void(0)" ui-tree-handle 
+      class="ddf_item_move_btn material-icons">open_with</a>      
+  </div> 
+  
 </div>
 
 <div flex class="ddf-configs {{ctrl.isShowConfig?'ng-show':'ng-hide'}} ">
-
-  fewfew
-<br>
-ddsf
-  fewfew
-<br>
-ddsf
-
+  fewfew  <br>  ddsf    fewfew  <br>  ddsf
 </div>

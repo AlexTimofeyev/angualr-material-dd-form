@@ -5,24 +5,32 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 
-const extractSass = new ExtractTextPlugin("[name].css");
-
+const extractStyle = new ExtractTextPlugin({
+    filename: 'vendor.[hash].css', 
+    allChunks: true
+});
+ 
 const compileHtml = new HtmlWebpackPlugin({
     template: path.resolve(__dirname, './examples/layout.html')
     , inject: 'content'
 });
 
-/*
-new ExtractTextPlugin('[name].css', {allChunks: true})
-*/
+const vendors =new webpack.optimize.CommonsChunkPlugin({
+    name: 'vendor', 
+    filename: 'vendor-[hash].js',
+});
 
-/*var pathToAngular = path.resolve(__dirname, '.node_modules/angular/angular.min.js');*/
+ 
 
 module.exports = {
 
     devtool: "source-map"
 
-    , entry: path.resolve(__dirname, './examples/index.js')
+   , entry : {
+        app   : path.resolve(__dirname, './examples/index.js'),
+        vendor: ['angular','angular-ui-tree','angular-material','angular-animate']
+    }
+
 
     , module: {
         rules: [
@@ -32,37 +40,33 @@ module.exports = {
                     loader: 'html-loader'
                 }],
             }
-            ,
-            {
-                test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
-                    use: ["css-loader", "sass-loader"]
-                })
-
-            }
-            ,
-            {
-                test: /\.css$/,
-                use: [{
-                    loader: "style-loader"
-                    , options: { root: '.' }
-                }, {
-                    loader: "css-loader"
-                    , options: { root: '.' }
-                }]
+            ,            
+            { 
+                test: /\.(scss|css)$/,    
+                use: extractStyle.extract({
+                    fallback: "style-loader",                    
+                    use: ['css-loader',  'sass-loader-once' ] 
+                }) 
             }
         ]
     }
 
     , plugins: [
-        compileHtml
-        ,extractSass
+        compileHtml        
+        , extractStyle      
+        , vendors
     ]
 
     , devServer: {
-        contentBase: path.join(__dirname, "examples"),
-        port: 9000
+        contentBase: path.join(__dirname, "examples")
+        , port: 9000
+    }
+
+    , resolve: {        
+         alias: { 
+             //'material': path.join( __dirname, 'src/style/angular-material.min.scss') 
+            //, style: './style/'  
+        } 
     }
 
 };

@@ -5,7 +5,8 @@ import tree     from 'angular-ui-tree';
 import elements from './elements/elements';
 import common   from './common/common';
 
-  
+
+require ('./style/main.scss');
 
 export default angular.module('ddf', [ 
     material
@@ -60,5 +61,4 @@ export default angular.module('ddf', [
   components,
   elements
 ]).config(config).name;
-
 */

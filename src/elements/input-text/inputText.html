@@ -2,5 +2,6 @@
     <label>{{item.config.label||item.name}}</label>
     <input type="text"
         ng-required="item.required"
+        ng-model="item[modelkey]"
         name="{{item.name}}" />
 </md-input-container>

@@ -1,5 +1,5 @@
-import template from './itemsEdit.html';
-import './itemsEdit.scss';
+import template from './itemsView.html';
+import './itemsView.scss';
 
 export default function() {
     return {

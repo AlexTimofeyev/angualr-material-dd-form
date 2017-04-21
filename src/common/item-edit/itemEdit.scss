@@ -1,30 +1,17 @@
-/*@import "./../../style/angular-material.min.scss"; 
- 
-$primary-color: #333;
-
- 
- .angular-ui-tree-drag {
-     opacity: 1;
- }
-
-.ddf-element-container {
-     background-color: $primary-color;
- }
- 
-.ddf-element-container-dragg .angular-ui-tree-node  {
-    @extend .md-whiteframe-8dp;    
-    background-color: white;
+//@import "~material"; 
+@import "./src/style/angular-material.min.scss";  
+.ddf_item_settings_btn,
+.ddf_item_move_btn {
+    font-weight: normal; 
+    color: grey; 
+    font-size: 2em;
+    text-decoration: none;
 }
+.ddf_item_settings_btn:hover,
+.ddf_item_move_btn:hover {
+    color: rgb(99, 99, 99);     
+} 
 
-.ddf-element-container-placeholder {
-    background-color: burlywood;
-    margin-bottom: 8px;
-     
- }
-
-md-input-container {
-    margin-bottom: 0px;
+.ddf-test8  {
+    //@extend .md-whiteframe-8dp;        
 }
-.md-errors-spacer {
-   min-height: 14px;
-}*/

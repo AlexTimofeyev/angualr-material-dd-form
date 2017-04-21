@@ -1,4 +1,4 @@
-import template from './itemEdit.html';
+import template   from './itemEdit.html';
 import controller from './itemEditController';
 import './itemEdit.scss';
 
