@@ -15,5 +15,20 @@
 </div>
 
 <div flex class="ddf-configs {{ctrl.isShowConfig?'ng-show':'ng-hide'}} ">
-  fewfew  <br>  ddsf    fewfew  <br>  ddsf
+  
+  Name
+  <input type="text" ng-model="item.name"><br/>
+
+  Label
+  <input type="text" ng-model="item.config.label"><br/>  
+
+  Placeholder
+  <input type="text" ng-model="item.config.placeholder"><br/>
+
+  Тип 
+  <select>
+      <option value="text">Text</option>
+      <option value="password">Password</option>
+  </select>
+
 </div>

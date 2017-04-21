@@ -1,7 +1,7 @@
 <md-input-container class="md-block" >
     <label>{{item.config.label||item.name}}</label>
-    <input type="text"
+    <input type="{{item.config.type||'text'}}"
         ng-required="item.required"
-        ng-model="item[modelkey]"
+        placeholder="{{item.config.placeholder}}"        
         name="{{item.name}}" />
 </md-input-container>

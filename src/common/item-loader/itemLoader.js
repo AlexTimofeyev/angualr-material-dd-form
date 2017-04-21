@@ -11,8 +11,8 @@ export default function($compile, $injector) {
 
         link : function (scope, element, attrs) {             
             let type = scope.item.type; 
-            
-            scope.modelkey = scope.editable === true?'name':'value';
+
+            //scope.modelkey = scope.editable === true?'name':'value';
              
             if( $injector.has( attrs.$normalize(`ddf-${type}-directive`) ) ) {
                 let template = `<ddf-${type} id="el-${scope.$id}"></ddf-${type}>`;                    
