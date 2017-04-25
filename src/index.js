@@ -4,6 +4,7 @@ import tree     from 'angular-ui-tree';
 
 import elements from './elements/elements';
 import common   from './common/common';
+import components   from './components/components';
 
 
 require ('./style/main.scss');
@@ -13,6 +14,7 @@ export default angular.module('ddf', [
     , tree 
     , elements
     , common 
+    , components
 ]).name; 
 
 angular.module('ui.tree').config(function(treeConfig) {

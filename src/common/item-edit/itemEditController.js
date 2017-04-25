@@ -1,7 +1,7 @@
 /* @ngInject */
 export default class ItemsController {
     constructor($scope) {
-        this.isShowConfig = false;
+        this.isShowConfig = false; 
         this.$scope = $scope;
     }
 

@@ -1,6 +1,6 @@
 <div flex layout="row">
 
-  <ddf-item-loader ddf-item=item ddf-editable=true flex class=""> </ddf-item-loader>
+  <ddf-item-loader ddf-item=item  flex class=""> </ddf-item-loader>
 
   <div layout="column" layout-align="center center" >
     <a href="javascript:void(0)" ng-click="ctrl.showConfig()" 
@@ -15,9 +15,9 @@
 </div>
 
 <div flex class="ddf-configs {{ctrl.isShowConfig?'ng-show':'ng-hide'}} ">
-  
-  Name
-  <input type="text" ng-model="item.name"><br/>
+  <ddf-options-loader ddf-item-options=item.options></ddf-options-loader>
+
+  <!--<input type="text" ng-model="item.name"><br/>
 
   Label
   <input type="text" ng-model="item.config.label"><br/>  
@@ -29,6 +29,6 @@
   <select>
       <option value="text">Text</option>
       <option value="password">Password</option>
-  </select>
+  </select>-->
 
 </div>
