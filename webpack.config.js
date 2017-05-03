@@ -6,7 +6,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 
 const extractStyle = new ExtractTextPlugin({
-    filename: 'vendor.[hash].css', 
+    filename: 'vendor.css', 
     allChunks: true
 });
  
@@ -17,18 +17,21 @@ const compileHtml = new HtmlWebpackPlugin({
 
 const vendors =new webpack.optimize.CommonsChunkPlugin({
     name: 'vendor', 
-    filename: 'vendor-[hash].js',
+    filename: 'vendor.js',
 });
 
  
 
 module.exports = {
 
-    devtool: "source-map"
+    //devtool: "source-map"
+    //devtool: "cheap-eval-source-map"
+    devtool: "nosources-source-map"
+    
 
    , entry : {
         app   : path.resolve(__dirname, './examples/index.js'),
-        vendor: ['angular','angular-ui-tree','angular-material','angular-animate']
+        //vendor: ['angular','angular-ui-tree','angular-material','angular-animate']
     }
 
 
@@ -48,6 +51,24 @@ module.exports = {
                     use: ['css-loader',  'sass-loader-once' ] 
                 }) 
             }
+            ,
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'ng-annotate-loader'
+                    }
+                    ,
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ['es2015'] 
+                        }
+                    }
+                ]
+                
+            }
         ]
     }
 
@@ -62,11 +83,16 @@ module.exports = {
         , port: 9000
     }
 
-    , resolve: {        
+    ,output: {
+        path: path.resolve(__dirname, 'dist')
+		,filename: 'bundle.js'
+	}
+
+    /*, resolve: {        
          alias: { 
              //'material': path.join( __dirname, 'src/style/angular-material.min.scss') 
             //, style: './style/'  
         } 
-    }
+    }*/
 
 };
