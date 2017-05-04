@@ -14,23 +14,23 @@ const compileHtml = new HtmlWebpackPlugin({
     , inject: 'content'
 });
 
-const vendors =new webpack.optimize.CommonsChunkPlugin({
+/*const vendors = new webpack.optimize.CommonsChunkPlugin({
     name: 'vendor', 
     filename: 'vendor.js',
-});
+});*/
 
  
 
 module.exports = {
 
-    //devtool: "source-map"
+    devtool: "source-map"
     //devtool: "cheap-eval-source-map"
-    devtool: "nosources-source-map"
+    //devtool: "nosources-source-map"
     
 
    , entry : {
-        app   : path.resolve(__dirname, './examples/index.js'),
-        //vendor: ['angular','angular-ui-tree','angular-material','angular-animate']
+        app     : path.resolve(__dirname, './examples/index.js')        
+        ,vendor  : ['angular','angular-ui-tree',path.resolve(__dirname,'./src/material/index.js')]        
     }
 
 
@@ -62,7 +62,7 @@ module.exports = {
                     {
                         loader: 'babel-loader',
                         options: {
-                            presets: ['es2015' ] 
+                            presets: ['es2015','es2017' ] 
                         }
                     }
                 ]
@@ -73,9 +73,15 @@ module.exports = {
 
     , plugins: [
         compileHtml        
-        , extractStyle   
-        , vendors
-         
+        , extractStyle  
+        , new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor' 
+        }) 
+       /* , new webpack.optimize.CommonsChunkPlugin({
+            name: 'uitree' 
+        }) */
+        
+        //, vendors 
     ]
 
     , devServer: {
@@ -83,9 +89,9 @@ module.exports = {
         , port: 9000
     }
 
-    ,output: {
+    , output: {
         path: path.resolve(__dirname, 'dist')
-		,filename: 'bundle.js'
+		,filename: '[name].js'
 	}
 
 };

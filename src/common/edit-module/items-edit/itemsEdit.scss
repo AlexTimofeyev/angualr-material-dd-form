@@ -1,4 +1,4 @@
-@import "./src/style/angular-material.min.scss";  
+//@import "./src/style/angular-material.min.scss";  
  
 $primary-color: #333;
 
@@ -12,7 +12,7 @@ $primary-color: #333;
  }
  
 .ddf-element-container-dragg .angular-ui-tree-node  {
-    @extend .md-whiteframe-8dp;    
+    
     background-color: white;
     cursor: move;
 }
