@@ -2,17 +2,19 @@ import angular  from 'angular';
 import material from 'angular-material';
 import tree     from 'angular-ui-tree';
 
-import elements from './elements/elements';
 import common   from './common/common';
+import elements from './elements/elements';
 import components   from './components/components';
 
 require ('./style/main.scss');
 
 export default angular.module('ddf', [ 
+    
     material
-    , tree 
-    , elements
     , common 
+    , tree 
+    
+    , elements    
     , components
 ]).name; 
 

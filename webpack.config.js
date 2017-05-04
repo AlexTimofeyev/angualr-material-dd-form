@@ -4,7 +4,6 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-
 const extractStyle = new ExtractTextPlugin({
     filename: 'vendor.css', 
     allChunks: true
@@ -63,7 +62,7 @@ module.exports = {
                     {
                         loader: 'babel-loader',
                         options: {
-                            presets: ['es2015'] 
+                            presets: ['es2015' ] 
                         }
                     }
                 ]
@@ -74,8 +73,9 @@ module.exports = {
 
     , plugins: [
         compileHtml        
-        , extractStyle      
+        , extractStyle   
         , vendors
+         
     ]
 
     , devServer: {
@@ -87,12 +87,5 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
 		,filename: 'bundle.js'
 	}
-
-    /*, resolve: {        
-         alias: { 
-             //'material': path.join( __dirname, 'src/style/angular-material.min.scss') 
-            //, style: './style/'  
-        } 
-    }*/
 
 };
