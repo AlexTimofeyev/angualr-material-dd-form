@@ -1,17 +1,19 @@
-import ddf  from '../src'; 
-import exampleHtml  from './example.html'; 
+import ddf         from '../src'; 
+import exampleHtml from './example.html'; 
  
  angular.module('exampleapp', [ ddf ])
 .component('exampleapp', {
         template: exampleHtml,
         controller: function() {        
-            
-            
+             
             window.iitems  = [{
                 type    : "input-text",
                 name    : 'Имя',
-                config  : {},
-                options  : [{type:'text','label':'Название поля','name':'name'}],
+                config  : {max:10},
+                options  : [
+                    {type:'text','label':'Название поля','name':'name'},
+                    {type:'number','label':'Максимальная длина','name':'max'}
+                    ],
                 subitems: []
             },
       
@@ -19,7 +21,9 @@ import exampleHtml  from './example.html';
                 type   : "input-text",
                 name   : 'Лет',
                 config : {type:'number'},
-                options  : [{type:'number','label':'Максимальная длина','name':'max'}],
+                options  : [
+                    {type:'text','label':'Название поля','name':'name'}
+                    ],
                 subitems: []
             }];
 

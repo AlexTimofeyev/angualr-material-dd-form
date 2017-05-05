@@ -4,6 +4,7 @@ let itemLoader = function ($compile, $injector) {
         restrict: 'AE',
         scope: {
             item: '=ddfItem',
+            option: '=ddfOption',
 
         },
         transclude: false,

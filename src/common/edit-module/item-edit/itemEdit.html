@@ -1,34 +1,21 @@
 <div flex layout="row">
 
-  <ddf-item-loader ddf-item=item  flex class=""> </ddf-item-loader>
+  <ddf-item-loader ddf-item=item flex class=""> </ddf-item-loader>
 
-  <div layout="column" layout-align="center center" >
-    <a href="javascript:void(0)" ng-click="ctrl.showConfig()" 
-      class="ddf_item_settings_btn material-icons">settings</a>    
+  <div layout="column" layout-align="center center">
+    <a href="javascript:void(0)" ng-click="ctrl.showConfig()" class="ddf_item_settings_btn material-icons">settings</a>
   </div>
 
-  <div layout="column" layout-align="center center"  >
-   <a href="javascript:void(0)" ui-tree-handle 
-      class="ddf_item_move_btn material-icons">open_with</a>      
-  </div> 
-  
+  <div layout="column" layout-align="center center">
+    <a href="javascript:void(0)" ui-tree-handle class="ddf_item_move_btn material-icons">open_with</a>
+  </div>
+
 </div>
 
 <div flex class="ddf-configs {{ctrl.isShowConfig?'ng-show':'ng-hide'}} ">
-  <ddf-options-loader ddf-item-options=item.options></ddf-options-loader>
-
-  <!--<input type="text" ng-model="item.name"><br/>
-
-  Label
-  <input type="text" ng-model="item.config.label"><br/>  
-
-  Placeholder
-  <input type="text" ng-model="item.config.placeholder"><br/>
-
-  Тип 
-  <select>
-      <option value="text">Text</option>
-      <option value="password">Password</option>
-  </select>-->
-
+  <ddf-option-loader 
+  ng-if="item.options"
+  ng-repeat="option in item.options" 
+  ddf-item=item 
+  ddf-option=option ></ddf-option-loader>
 </div>
