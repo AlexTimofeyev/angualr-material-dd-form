@@ -1,12 +1,10 @@
 import controller from './number.controller';
-
-export default function() {
+const optionNumber = function() {
     return {
         restrict: 'E',
-       
         template: require ( './number.html' ),
         controllerAs: 'ctrl',
-        controller: controller,
-        
+        controller: controller 
     };
-}
+};
+export default optionNumber;

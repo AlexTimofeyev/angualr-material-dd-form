@@ -1,0 +1,6 @@
+<md-input-container class="md-block" >
+    <label>{{item.config.label||item.name}}</label>
+    <input type="number" name="{{item.name}}"
+        ng-model="item.result[item.name]"
+        ng-required="item.config.required" />
+</md-input-container>

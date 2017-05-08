@@ -5,5 +5,4 @@ const optionsLoader = function() {
         template: require('./options-loader.html')
     };
 };
-
 export default optionsLoader;

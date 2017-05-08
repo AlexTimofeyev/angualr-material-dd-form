@@ -1,6 +1,4 @@
-/* @ngInject */
-export default class InputTextController {
-    constructor($scope) { 
-        //console.log('InputTextController',$scope);
-    }
-}
+class InputTextController {
+    constructor($scope) { }
+};
+export default InputTextController;

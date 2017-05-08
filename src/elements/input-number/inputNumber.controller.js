@@ -1,5 +1,5 @@
 class InputTextController {
     /* @ngInject */
-    constructor($scope) {}
+    constructor($scope) { } 
 }
 export default InputTextController;

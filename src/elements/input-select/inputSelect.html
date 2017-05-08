@@ -1,0 +1,10 @@
+<md-input-container class="md-block" >
+    <label>{{item.config.label||item.name}}</label> 
+    <md-select ng-model="item.result[item.name]" >
+        <md-option 
+            ng-repeat="option in item.config.options"
+             ng-value="option.value">  
+            {{option.label}}
+        </md-option>        
+    </md-select>
+</md-input-container>

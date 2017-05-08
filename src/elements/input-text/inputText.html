@@ -1,6 +1,5 @@
 <md-input-container class="md-block" >
     <label>{{item.config.label||item.name}}</label>
-    <input type="{{item.config.type||'text'}}"
-        ng-required="item.required"        
-        name="{{item.name}}" />
+    <input type="text" name="{{item.name}}" ng-model="item.result[item.name]"
+        ng-required="item.config.required"  />
 </md-input-container>

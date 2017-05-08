@@ -1,5 +1,5 @@
-/* @ngInject */
-export default class ItemsController {
+class ItemsController {
+     
     constructor($scope) {
         this.isShowConfig = false; 
         this.$scope = $scope;
@@ -24,4 +24,5 @@ export default class ItemsController {
         this.isShowConfig = !this.isShowConfig;
         console.log( 'showParams' );
     }
-}
+};
+export default ItemsController;

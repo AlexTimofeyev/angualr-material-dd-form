@@ -5,7 +5,8 @@ export default function() {
     return {
         restrict: 'EA',
         scope : {
-            items:'=ddfItems' 
+            items:'=ddfItems',
+            result:'=ddfResult' 
         },
         template: template
     };

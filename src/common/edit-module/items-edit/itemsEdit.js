@@ -1,4 +1,5 @@
 import template from './itemsEdit.html';
+import controller from './itemsEditController';
 import './itemsEdit.scss';
 
 export default function() {
@@ -7,6 +8,8 @@ export default function() {
         scope : {
             items:'=ddfItems' 
         },
-        template: template
+        template: template,
+        controllerAs: 'ctrl',
+        controller: controller
     };
 }

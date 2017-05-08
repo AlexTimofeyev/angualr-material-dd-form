@@ -1,11 +1,10 @@
 import controller from './text.controller';
-
-export default function() {
+const optionText = function() {
     return {
         restrict: 'E',       
         template: require ( './text.html' ),
         controllerAs: 'ctrl',
-        controller: controller,
-        
+        controller: controller
     };
-}
+};
+export default optionText;

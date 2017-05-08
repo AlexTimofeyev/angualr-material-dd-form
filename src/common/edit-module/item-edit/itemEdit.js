@@ -1,8 +1,7 @@
 import template   from './itemEdit.html';
 import controller from './itemEditController';
 import './itemEdit.scss';
- 
-export default function() {
+ const itemEdit = function() {
     return {
         restrict: 'EA',
         scope : {
@@ -12,4 +11,5 @@ export default function() {
         controllerAs: 'ctrl',
         controller: controller
     };
-}
+};
+export default itemEdit;
