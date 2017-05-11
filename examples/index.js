@@ -1,10 +1,24 @@
-import ddf         from '../src'; 
+//import ddf         from '../src'; 
+//import angular                  from 'angular';
 import exampleHtml from './example.html'; 
  
- angular.module('exampleapp', [ ddf ])
+ angular.module('exampleapp', [   ])
+ .directive('mytest', function () {
+      return {
+      restrict:'E',
+      link: function(scope, element,attr) {
+          element.bind('touchstart mousedown', function(e) { 
+              console.log(e.type); 
+            })
+      }
+   }
+ })
 .component('exampleapp', {
         template: exampleHtml,
-        controller: function() {        
+        controller: function() {   
+            
+            this.viewMode = false;    
+            this.iits = [{name:'aa'},{name:'gvsdfsdfs'},{name:'sdasd'}]; 
              
             window.iitems  = [{
                 type    : "input-text",

@@ -1,7 +1,7 @@
 import template from './itemsView.html';
 import './itemsView.scss';
 
-export default function() {
+const viewModel = function() {
     return {
         restrict: 'EA',
         scope : {
@@ -10,4 +10,6 @@ export default function() {
         },
         template: template
     };
-}
+};
+
+export default viewModel;

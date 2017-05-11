@@ -1,0 +1,48 @@
+<!--<md-input-container class="md-block" > 
+ <label>{{option.label}}</label>
+    <input type="text" 
+    ng-model="objectReff[option.name]"  />
+</md-input-container>
+-->
+<div ui-tree="optionsUiTree" class="optionsUiTree" style="margin-right: 5px">
+    <ol ui-tree-nodes="test" ng-model="item.config.options">
+        <div ng-repeat="option in item.config.options" ui-tree-node
+            style="border: 1px solid #a9a9a9; margin-right: 5px; margin-bottom: 5px">
+          <!--  <div layout="column" layout-align="center center">
+                <a href="javascript:void(0)" class="ddf_item_settings_btn material-icons">settings</a>
+            </div>-->
+            <div layout="row" class="layout-row flex">
+
+                <md-input-container class="ng-isolate-scope flex optionsUiTreeNode"
+                    style="margin: 0; padding: 0">
+                    <input type="text" ng-model="option.label"  />
+                </md-input-container>
+
+                <!--<input type="text" ng-model="option.label"  />-->
+                <div layout="column" layout-align="center center"  class="layout-align-center-center layout-column">
+                    <a href="javascript:void(0)" 
+                        ui-tree-handle 
+                        style="font-size: 20px;"
+                        class="ddf_item_move_btn material-icons">open_with</a>
+                </div>
+            </div>
+        </div>
+
+
+
+    </ol>
+</div>
+
+
+<!--<div ui-tree="mainUiTree" style="padding: 0 5px">
+  <div ui-tree-nodes ng-model="items">
+    <div layout="column" 
+          ng-repeat="item in items" 
+          ui-tree-node 
+          layout="row" 
+          class="md-whiteframe-2dp" 
+          style="margin-bottom: 8px">
+      <ddf-item-edit ddf-item=item></ddf-item-edit>
+    </div>
+  </div>
+</div> -->

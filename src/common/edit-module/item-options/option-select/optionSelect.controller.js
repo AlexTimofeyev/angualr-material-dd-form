@@ -1,11 +1,9 @@
 class InputTextController {
     /* @ngInject */
-    constructor($scope) {
-        $scope.scopeUiTree = 'optionsUiTree';
+    constructor($scope, helperFactory) {      
         $scope.optionsUiTree = {
             accept: function(sourceNodeScope, destNodesScope, destIndex) {
-                //$scope.scopeId 
-                return 'optionsUiTree' == $scope.scopeUiTree;
+                return helperFactory.isSameUiTreeScope($scope, sourceNodeScope);
             },
         }; 
      }

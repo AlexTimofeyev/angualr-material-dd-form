@@ -30,7 +30,7 @@ module.exports = {
 
    , entry : {
         app     : path.resolve(__dirname, './examples/index.js')        
-        ,vendor  : ['angular','angular-ui-tree',path.resolve(__dirname,'./src/material/index.js')]        
+        //,vendor  : ['angular','angular-ui-tree',path.resolve(__dirname,'./src/material/index.js')]        
     }
 
 

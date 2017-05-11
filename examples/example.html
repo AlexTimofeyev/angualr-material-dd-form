@@ -1,14 +1,34 @@
-<div layout="column" style="height:100%;" flex>
+<!--<div layout="column" style="height:100%;" flex>
 
-     <div flex=100 class="md-whiteframe-2dp">
+     <md-switch ng-model="$ctrl.viewMode" aria-label="Switch view mode">
+        Switch view mode 
+    </md-switch> 
+
+     <div flex=100  >
         <div layout="row" layout-align="center center">
-            <div layout="row" style="width: 400px; padding-top: 8px;"> 
-                <ddf-items-edit ddf-items="$ctrl.items"  flex> </ddf-items-edit>  
+            <div layout="row" style="width: 400px; padding-top: 8px;"> -->
+                
+               <!-- 
+                <ddf-items-edit ng-if="!$ctrl.viewMode" ddf-items="$ctrl.items"  flex> </ddf-items-edit>  
+
+                <ddf-items-view  ng-if="$ctrl.viewMode"
+                ddf-items="$ctrl.items" 
+                ddf-result="$ctrl.result" 
+                flex>
+                </ddf-items-view> -->
+ 
+
+<!-- <div ui-tree style="padding: 0 5px">
+  <div ui-tree-nodes ng-model="$ctrl.iits">
+    <div ng-repeat="its in $ctrl.iits" ui-tree-node  > {{its.name}} </div> 
+      
+    </div>
+  </div> 
             </div>
         </div>
-    </div> 
+    </div> -->
     
-    <ddf-fab-button ng-if="$ctrl.items" ddf-items="$ctrl.items" ></ddf-fab-button>
+    <!--<ddf-fab-button ng-if="$ctrl.items" ddf-items="$ctrl.items" ></ddf-fab-button>-->
     
 <!--<md-fab-speed-dial md-direction="up" class="md-fling">
   <md-fab-trigger>
@@ -26,8 +46,8 @@
   </md-fab-actions>
 </md-fab-speed-dial>-->
 
-     <button class="md-fab md-fab-bottom-right md-button md-ink-ripple" type="button" aria-label="Add">+</button>
-
+     <!--<button class="md-fab md-fab-bottom-right md-button md-ink-ripple" type="button" aria-label="Add">+</button>-->
+<!--
      <div flex=50>
         <div layout="row" layout-align="center center">
             <div layout="row" style="width: 600px">                 
@@ -40,6 +60,22 @@
                 
             </div>
         </div>
-    </div>
+    </div>-->
  
+<!--</div>-->
+
+
+ 
+<div ui-tree>
+  <ol ui-tree-nodes="" ng-model="$ctrl.iits">
+    <li ng-repeat="item in $ctrl.iits" ui-tree-node>
+      <div ui-tree-handle>
+        {{item.name}}
+      </div>
+       
+    </li>
+  </ol>
 </div>
+ddd
+
+<mytest>  TEST !!! </mytest>

@@ -1,12 +1,11 @@
 class ItemsController {
     /* @ngInject */
-    constructor($scope) {
-         $scope.mainUiTree = {
+    constructor($scope, helperFactory) { 
+        $scope.mainUiTree = {
             accept: function(sourceNodeScope, destNodesScope, destIndex) {
-                console.log('mainUiTree', destNodesScope);
-                return true;
-            },
+                return helperFactory.isSameUiTreeScope($scope, sourceNodeScope);
+            }
         }; 
     } 
 } 
-export default ItemsController;
+export default ItemsController; 

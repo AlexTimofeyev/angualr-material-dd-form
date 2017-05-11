@@ -16,7 +16,8 @@ import fabToolbar    from "./../../node_modules/angular-material/modules/js/fabT
 /*material.components.fabToolbar', [
       'material.core',
       'material.components.fabShared',
-      'material.components.fabActions'*/
+      'material.components.fabActions'
+*/
 
 
  
