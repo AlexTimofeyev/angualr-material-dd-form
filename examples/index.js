@@ -1,8 +1,8 @@
-//import ddf         from '../src'; 
-//import angular                  from 'angular';
+import ddf         from '../src'; 
+import angular     from 'angular';
 import exampleHtml from './example.html'; 
  
- angular.module('exampleapp', [   ])
+ angular.module('exampleapp', [ ddf  ])
  .directive('mytest', function () {
       return {
       restrict:'E',

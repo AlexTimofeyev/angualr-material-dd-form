@@ -2,7 +2,7 @@ import itemsEdit from './items-edit/itemsEdit';
 import itemEdit  from './item-edit/itemEdit';
 import options   from './item-options/options';
 import loader    from '../loader-module';
-import tree      from 'angular-ui-tree';
+import tree      from "../../lib/angular-ui-tree";
 
 angular.module('ui.tree').config(function(treeConfig) {
    treeConfig.placeholderClass = "ddf-element-container-placeholder";
