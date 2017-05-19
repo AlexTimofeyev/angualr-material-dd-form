@@ -12,5 +12,4 @@ const helperFactory = function( ) {
         isSameUiTreeScope: isSameUiTreeScope
     }
 }
- 
- export default helperFactory;
+export default helperFactory;
