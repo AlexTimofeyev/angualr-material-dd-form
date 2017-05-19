@@ -1,3 +1,0 @@
-[submodule "src/lib/angular-ui-tree"]
-	path = src/lib/angular-ui-tree
-	url = https://github.com/AlexTimofeyev/angular-ui-tree.git
